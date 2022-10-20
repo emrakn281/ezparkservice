@@ -4,9 +4,6 @@ const db = require('../data/db');
 
 app.get('/orders', (req, res) => {
     db.query('SELECT * FROM orders', (err, rows) => {
-        if (err) {
-            throw err;
-        }
         res.send(rows);
     });
 });
