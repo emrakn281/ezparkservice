@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
-const students = require('./students');
-const orders = require('./orders');
+const students = require('./routes/students');
+const orders = require('./routes/orders');
 const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => res.send('Hello World!'));
+app.use(express.static('data'));
+app.use(express.static('routes'));
 app.use(students);
 app.use(orders);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
