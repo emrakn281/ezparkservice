@@ -1,9 +1,10 @@
 const config = {
     db: {
-        host: 'ezpark.csg7qzz2jcel.eu-north-1.rds.amazonaws.com',
-        user: 'admin',
-        password: 'emrakn281',
-        database: 'classicmodels'
+        host: 'lmc8ixkebgaq22lo.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
+        user: 'ca0wflnrkb7s45g6',
+        password: 'hhyge386myr8ammh',
+        database: 'x4bmlotiqwcnfzb3',
+        port: 3306
     }
 }
 
