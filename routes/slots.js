@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const db = require('../data/db');
 
-app.get('/orders', (req, res) => {
-    db.query('SELECT * FROM orders', (err, rows) => {
+app.get('/slots', (req, res) => {
+    db.query('SELECT * FROM productlines', (err, rows) => {
         res.send(rows);
     });
 });
