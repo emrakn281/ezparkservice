@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const plates = require('./routes/plates');
 const customers = require('./routes/customers');
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => res.send('Hello World!'));
 app.use(express.static('data'));
 app.use(express.static('routes'));
+app.use(cors());
 app.use(plates);
 app.use(customers);
 app.use(entries);
