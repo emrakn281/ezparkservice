@@ -49,7 +49,7 @@ app.get('/addcustomer', (req, res) => {
         } else {
             ID = rows.insertId;
 
-            db.query("insert into MATCH (USER_ID,PLATE_ID) values (" + ID + "," + PLATE_ID + ")", (err, rows) => {
+            db.query("insert into MATCHS (USER_ID,PLATE_ID) values (" + ID + "," + PLATE_ID + ")", (err, rows) => {
                 if (err) {
                     res.send({ err, "message": "failed" });
                 } else {

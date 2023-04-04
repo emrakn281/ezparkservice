@@ -50,9 +50,10 @@ app.get('/matchplate', (req, res) => {
         if (err) {
             res.send({ err, "message": "failed" });
         } else {
+            console.log("select * from CUSTOMERS where MAIL='" + MAIL + "' and PASSWORD='" + PASSWORD + "'");
             if (rows.length > 0) {
                 USER_ID = rows[0].ID;
-                db.query("insert into MATCH (USER_ID,PLATE_ID) values (" + USER_ID + "," + PLATE_ID + ")", (err, rows) => {
+                db.query("insert into MATCHS (USER_ID,PLATE_ID) values (" + USER_ID + "," + PLATE_ID + ")", (err, rows) => {
                     if (err) {
                         res.send({ err, "message": "failed" });
                     } else {
