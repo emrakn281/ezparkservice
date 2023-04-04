@@ -30,6 +30,7 @@ app.get('/addcustomer', (req, res) => {
     SURNAME = req.query.SURNAME;
     MAIL = req.query.MAIL;
     PASSWORD = req.query.PASSWORD;
+    PLATE_ID =req.query.PLATE_ID;
     var date = new Date();
     var year = date.getFullYear();
     var month = date.getMonth() + 1;
@@ -48,11 +49,11 @@ app.get('/addcustomer', (req, res) => {
         } else {
             ID = rows.insertId;
 
-            db.query("insert into MATCH (CUSTOMER_ID,IS_DELETED) values (" + ID + ",0)", (err, rows) => {
+            db.query("insert into MATCH (USER_ID,PLATE_ID) values (" + ID + "," + PLATE_ID + ")", (err, rows) => {
                 if (err) {
                     res.send({ err, "message": "failed" });
                 } else {
-                    res.send({ "message": "success", "ID": ID });
+                    res.send({ "message": "success" });
 
                 }
 
