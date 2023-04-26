@@ -1,9 +1,9 @@
 const config = {
     db: {
-        host: '185.48.180.104',
-        user: 'ezpark_user',
-        password: 'k0a&vA39',
-        database: 'ezpark',
+        host: 'xxxxxxxxx',
+        user: 'xxxxxxx',
+        password: 'xxxxxxxx',
+        database: 'xxxxxxxxx',
         port: 3306
     }
 }
